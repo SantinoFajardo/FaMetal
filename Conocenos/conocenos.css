@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+    padding-top: 100px;
+}
+
+/* Menú */
+.menu{
+    margin-top: -100px;
+    position: fixed;
+    background: #0a141d;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    z-index: 10000;
+}
+
+.logo{
+    color: #fff;
+    font-size: 3.5em;
+    padding: 0 80px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.menu__items{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu__items li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.menu__items li a{
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 1.8em;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.menu__items li:hover, li.active{
+    background-color: rgba(0, 0, 0, .3);
+    transition: .4s;
+}
+
+.btn__menu{
+    margin-right: 30px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+ul.show{
+    top: 65px;
+}
+
+@media screen and(max-width: 952px){
+    .logo{
+        font-size: 30px;
+        padding-left: 35px;
+    }
+    .menu__items li a{
+        font-size: 1.6px;
+    }
+}
+
+@media screen and (max-width: 858px){
+    .menu{
+        height: 65px;
+    }
+    .btn__menu{
+        display: inline-flex;
+    }
+    .menu__items{
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background: #414141;
+        top: -1000vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    .menu__items li{
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    .menu__items li:hover{
+        background: none;
+    }
+    .menu__items li a{
+        font-size: 2em;
+        color: #fff;
+        font-weight: bold;
+    }
+    .menu__items li a:hover{
+        color: #16366E;
+    }
+    .logo{
+        font-size: 2.5em;
+        padding-left: 35px;
+    }
+}
+
+@media screen and (max-width: 858px) and (orientation: landscape){
+    .menu__items li{
+        margin: 5px 0 0 0;
+    }
+    .menu__items{
+        overflow: scroll;
+        height: calc(100% - 65px);
+    }
+}
+
+/* Seccion de presentacion */
+
+
+.nosotros_contenido{
+    margin: auto;
+    margin-top: 10px;
+    width: 80%;
+    font-size: 3em;
+    padding: 20px;
+}
+
+.nosotros_contenido img{
+    float: right;
+    width: 300px;
+    min-width: 200px;
+}
+@media screen and (max-width : 620px){
+    .nosotros_contenido{
+        text-align: center;
+    }
+
+    .nosotros_contenido img{
+        width: 100%;
+    }
+}
+
+/* Secciones de trabajo */
+
+.sectores{
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    margin-top: 50px;
+    height: 100%;
+    background: linear-gradient(rgba(5,7,12,.75), rgba(5,7,12,.75)), url(https://thumbs.dreamstime.com/b/interior-de-la-l%C3%ADnea-producci%C3%B3n-moderna-construcci%C3%B3n-f%C3%A1bricas-con-modos-y-%C3%A1reas-trabajo-claros-darlington-gran-britain-184748174.jpg);
+}
+.sectores h1{
+    color:white;
+    font-size: 6em;
+    font-weight: 1;
+}
+.secciones_conteiner{
+    margin-top: 30px;
+    padding: 10px  60px;
+}
+.secciones_conteiner h2{
+    text-align: center;
+    font-size: 3em;
+}
+.secciones_conteiner p{
+    text-align: center;
+    font-size: 2em;
+}
+.secciones{
+    margin-bottom: 50px;
+}
+
+/* Descargar carta de trabajo */
+.cartasTrabajo{
+    margin-bottom: 10px;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 100%;
+    background: linear-gradient(rgba(5,7,12,.75), rgba(5,7,12,.75)), url(https://c.wallhere.com/photos/6f/fc/indoors-158537.jpg!d);
+}
+.cartasTrabajo h1{
+    color: white;
+    font-size: 5em;
+    font-weight: 1;
+    margin-bottom: 30px;
+}
+.cartasTrabajo button{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius:20px ;
+    border: none;
+    background: #0a141d;
+    color: beige;
+    font-size: 2em;
+}
+.cartasTrabajo_button:hover{
+    background:#16366E ;
+    color: #EBEBEC;
+    animation: vibrate 0.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+ }
+
+ @keyframes vibrate {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(-1deg);
+    }
+    20%{
+        transform: rotate(1deg);
+    }
+    30%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(1deg);
+    }
+    50%{
+        transform: rotate(-1deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    70%{
+        transform: rotate(-1deg);
+    }
+    80%{
+        transform: rotate(1deg);
+    }
+    90%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-1deg);
+    }
+ }
+
+
+
+/* Pie de pagina */
+
+ .footer{
+    width: 100%;
+    background: #0a141d;
+}
+
+.footer .grupo1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+}
+
+.footer .grupo1 .box figure{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.footer .grupo1 .box figure img{
+    width: 250px;
+}
+.footer .grupo1 .box h2{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.footer .grupo1 .box p{
+    color: #efefef;
+    margin-bottom: 10px; 
+    font-size: 1.5em; 
+}
+.footer .grupo1 .box li{
+    color: #efefef;
+    margin-bottom: 10px; 
+    font-size: 1.5em; 
+}
+.footer .grupo1 .box b{
+    color: #efefef;
+    margin-bottom: 10px; 
+    font-size: 1em; 
+}
+
+.footer .grupo1 .redSocial a{
+    font-size: 2.5em;
+    display: inline-block;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+    margin-top: 5px;
+}
+.footer .grupo1 .redSocial a:hover{
+    color: aqua;
+}
+
+.footer .grupo2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+.footer .grupo2 small{
+    font-size: 1.5em;
+}
+
+@media screen and (max-width : 800px) {
+    .footer .grupo1{
+        width: 90%;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 30px;
+        padding: 35px 0;
+    }
+}
